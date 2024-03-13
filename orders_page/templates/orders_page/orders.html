@@ -1,0 +1,26 @@
+{% extends 'orders_page/base.html' %}
+{% load static %}
+
+{% block title %}Orders Page{% endblock %}
+
+{% block header %}Orders Page{% endblock %}
+
+{% block content %}
+	<h1>Orders:</h1>
+
+    {% if order_list %}
+        <ul class=color-with-marker>
+        {% for order in order_list %}
+            <li><a href="/orders/{{order.id}}/details/"> Order# {{order.order_number}} for {{order.user_name}} placed on {{order.pub_date.day}}/{{order.pub_date.month}}/{{order.pub_date.year}}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No orders have been placed</p>
+    {% endif %}
+
+    <a href="/orders/add/">
+        <button class="button">
+            Place an Order       
+        </button>
+    </a>
+{% endblock %}

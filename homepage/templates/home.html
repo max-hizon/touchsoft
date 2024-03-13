@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: left;
+  padding: 30px;
+}
+.grid-item2 {
+  width: 700px;
+  height: 400px;
+  background-color: antiquewhite;
+  border-radius: 30px;
+  padding: 10px;
+  grid-template-columns: auto auto;
+}
+
+.grid-item {
+  padding: 30px;
+  font-size: 30px;
+  text-align: left;
+}
+
+.image-item {
+  font-size: 30px;
+  text-align: left;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+}
+</style>
+
+  <div class="grid-container">
+    <div class="grid-item" >
+      <ul>
+        <li><b><font face="Arial" size="50px" color="FFFFFF">TOUCH</font></b></li>
+        <li><b><font face="Arial" size="50px" color="FFFFFF">SOFT</font></b></li>
+        <p><font face="Courier New" size="5px" color="FFFFFF">
+        <span class="br"></span> 
+        Home of the perfect <br>
+        <span class="brsmall"></span> 
+        croissant and home of the <br>
+        <span class="brxsmall"></span>
+        world's best pastries
+        </font>
+        </p>
+      </ul>
+  </div>
+
+  <div class="grid-item2">
+    <div class="grid-container">
+      <div class="image-item"><img src="{% static 'images/resto.webp' %}" width="300px" height="330px"></div>
+      <div class="grid-item">Katipunan Branch <br> <br>
+        Location: UP Town Center<br>
+        Income:   60000 <br>
+        Expenses: 40000
+        
+      </div>
+   
+    </div>
+
+  </div>
+
+  <div class="grid-item"><font face="Arial" size="50px" color="FFFFFF"></font></div>
+
+
+  <div class="grid-item2">
+    <div class="grid-container">
+      <div class="image-item"><img src="{% static 'images/resto2.jpg' %}" width="310px" height="320px"></div>
+      <div class="grid-item">Makati Branch <br> <br>
+        Location: Glorietta <br>
+        Income:   90000 <br>
+        Expenses: 75000
+        
+      </div>
+   
+    </div>
+
+  </div>
+  
+</div>
+  </html>
+  
+
+  
+  
+{% endblock content %}
+
+
+

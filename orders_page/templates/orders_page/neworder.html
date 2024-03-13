@@ -1,0 +1,16 @@
+{%extends "orders_page/base.html" %}
+
+{% block content %}
+<h1>Order Form</h1>
+<form action="{% url 'orders_page:new_order' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ order_form.as_p }}
+    <button class="button" type="submit">Place Order</button>
+</form>
+</br>
+<a href="/orders/">
+    <button class="button">
+        Orders Page
+    </button>
+</a>
+{% endblock %}

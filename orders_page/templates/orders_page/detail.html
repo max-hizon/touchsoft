@@ -1,0 +1,12 @@
+{% extends "orders_page/base.html" %}
+
+{% block content %}
+
+    <div class="card">
+        <h1>{{order.order_number}}</h1> 
+        <p>Order placed by {{order.user_name}} , 
+            on {{order.pub_date.day}}/{{order.pub_date.month}}/{{order.pub_date.year}}</p>
+        <p>{{order.product_name}} </p>
+        <p>{{order.product_quantity}}</p>
+    </div>
+{% endblock %}

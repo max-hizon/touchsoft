@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <br>
+    <title>{% block title %}Home Page{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <style>
+        body {
+            background: url('{% static "images/bg.jpg" %}') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Touch Soft</a>
+      <li></li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link disabled">Find Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Careers</a>
+          </li>
+        </ul>
+        <button><img src="https://flyclipart.com/thumb2/calendar-png-icon-free-download-592849.png" width="40" /></button>
+        <ul></ul>
+        <button><img src="https://toppng.com/uploads/preview/shopping-cart-11530997216xsrc2jr32q.png" alt="Download shopping cart clipart png photo  @toppng.com" width="40"></button>
+        <ul></ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button><img src="https://www.pikpng.com/pngl/m/109-1092659_search-icon-small-png-clipart.png" alt="Search Icon Small Png Clipart@pikpng.com" height="20" width="20" /></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    
+    {% block scripts %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
